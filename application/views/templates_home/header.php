@@ -69,6 +69,22 @@
 
                                             </li>
                                             <?php if ($this->session->userdata('email')) {  ?>
+                                                
+                                                <li>
+                                                    <a class="<?= $this->uri->uri_string() === 'home/shop' ? 'active' : '' ?>" href="<?= base_url('home/shop') ?>">
+                                                        <span class="menu-text">Paket</span>
+                                                        
+                                                    </a>
+                                                    
+                                                </li>
+                                                <li>
+                                                    <a class="<?= $this->uri->uri_string() === 'home/restoran' ? 'active' : '' ?>" href="<?= base_url('home/restoran') ?>">
+                                                        <span class="menu-text">Makam</span>
+                                                        
+                                                    </a>
+                                                    
+                                                </li>
+
                                                 <li>
                                                     <a class="<?= $this->uri->uri_string() === 'home/order' ? 'active' : '' ?>" href="<?= base_url('home/order') ?>">
                                                         <span class="menu-text"> Booking</span>
@@ -77,11 +93,6 @@
                                                 </li>
                                             <?php } else { ?>
                                             <?php } ?>
-                                            <li>
-                                                <a class="<?= $this->uri->uri_string() === 'home/about' ? 'active' : '' ?>" href="<?= base_url('home/about') ?>">
-                                                    <span class="menu-text"> Denah TPU</span>
-                                                </a>
-                                            </li>
                                             <li>
                                                 <a class="<?= $this->uri->uri_string() === 'home/contact' ? 'active' : '' ?>" href="<?= base_url('home/contact') ?>">
                                                     <span class="menu-text">Kontak</span>
