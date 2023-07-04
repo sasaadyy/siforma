@@ -17,14 +17,6 @@ class Makam_model extends CI_Model {
 		return $this->db->get($table);
 	}
 
-	public function update_password($where,$data,$table)
-	{
-		$this->db->where($where);
-		$this->db->update($table,$data);
-	}
-
-
-
 	public function insert_makam($data,$table)
 	{
 		$this->db->insert($table,$data);
