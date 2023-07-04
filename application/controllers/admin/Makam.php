@@ -45,8 +45,7 @@ class Makam extends CI_Controller {
 
 	public function edit_makam($id)
 	{
-		$data['title'] = "Update Makam | Siforma";
-		$data['res_kategori'] = $this->reskategori_model->tampil_data('res_kategori')->result();
+		$data['title'] = "Update Makam | Siforma";		
 		$data['detail'] = $this->db->query("SELECT * FROM makam r WHERE r.id_makam='$id' ORDER BY id_makam DESC")->result();
 		$this->load->view('templates_admin/header',$data);
 		$this->load->view('templates_admin/topbar');

@@ -14,29 +14,29 @@
     <!-- CSS
        ============================================ -->
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?= base_url('assets/food/') ?>assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/user/') ?>assets/css/vendor/bootstrap.min.css">
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="<?= base_url('assets/food/') ?>assets/css/vendor/font.awesome.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/user/') ?>assets/css/vendor/font.awesome.min.css">
     <!-- Ionicons -->
-    <link rel="stylesheet" href="<?= base_url('assets/food/') ?>assets/css/vendor/ionicons.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/user/') ?>assets/css/vendor/ionicons.min.css">
     <!-- Slick CSS -->
-    <link rel="stylesheet" href="<?= base_url('assets/food/') ?>assets/css/plugins/slick.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/user/') ?>assets/css/plugins/slick.min.css">
     <!-- Animation -->
-    <link rel="stylesheet" href="<?= base_url('assets/food/') ?>assets/css/plugins/animate.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/user/') ?>assets/css/plugins/animate.min.css">
     <!-- jQuery Ui -->
-    <link rel="stylesheet" href="<?= base_url('assets/food/') ?>assets/css/plugins/jquery-ui.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/user/') ?>assets/css/plugins/jquery-ui.min.css">
     <!-- Nice Select -->
-    <link rel="stylesheet" href="<?= base_url('assets/food/') ?>assets/css/plugins/nice-select.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/user/') ?>assets/css/plugins/nice-select.min.css">
     <!-- Magnific Popup -->
-    <link rel="stylesheet" href="<?= base_url('assets/food/') ?>assets/css/plugins/magnific-popup.css">
+    <link rel="stylesheet" href="<?= base_url('assets/user/') ?>assets/css/plugins/magnific-popup.css">
 
     <!-- Vendor & Plugins CSS (Please remove the comment from below vendor.min.css & plugins.min.css for better website load performance and remove css files from the above) -->
 
-    <!-- <link rel="stylesheet" href="<?= base_url('assets/food/') ?>assets/css/vendor/vendor.min.css">
-        <link rel="stylesheet" href="<?= base_url('assets/food/') ?>assets/css/plugins/plugins.min.css"> -->
+    <!-- <link rel="stylesheet" href="<?= base_url('assets/user/') ?>assets/css/vendor/vendor.min.css">
+        <link rel="stylesheet" href="<?= base_url('assets/user/') ?>assets/css/plugins/plugins.min.css"> -->
 
     <!-- Main Style CSS (Please use minify version for better website load performance) -->
-    <link rel="stylesheet" href="<?= base_url('assets/food/') ?>assets/css/style.css">
+    <link rel="stylesheet" href="<?= base_url('assets/user/') ?>assets/css/style.css">
     <!-- <link rel="stylesheet" href="assets/css/style.min.css"> -->
 </head>
 
@@ -54,7 +54,7 @@
                                 <div class="col-lg-2 col-xl-2 col-sm-6 col-6 col-custom">
                                     <div class="header-logo d-flex align-items-center">
                                         <a href="<?= base_url('') ?>">
-                                            <img class="img-full" src="<?= base_url('assets/food/') ?>assets/images/logo/logoo.png" alt="Header Logo">
+                                            <img class="img-full" src="<?= base_url('assets/user/') ?>assets/images/logo/logoo.png" alt="Header Logo">
                                         </a>
                                     </div>
                                 </div>
@@ -68,28 +68,11 @@
                                                 </a>
 
                                             </li>
-                                            <?php if ($this->session->userdata('email')) {  ?>
-                                                
-                                                <li>
-                                                    <a class="<?= $this->uri->uri_string() === 'home/shop' ? 'active' : '' ?>" href="<?= base_url('home/shop') ?>">
-                                                        <span class="menu-text">Paket</span>
-                                                        
-                                                    </a>
-                                                    
-                                                </li>
-                                                <li>
-                                                    <a class="<?= $this->uri->uri_string() === 'home/restoran' ? 'active' : '' ?>" href="<?= base_url('home/restoran') ?>">
-                                                        <span class="menu-text">Makam</span>
-                                                        
-                                                    </a>
-                                                    
-                                                </li>
-
+                                            <?php if ($this->session->userdata('email')) {  ?>                                                                                               
                                                 <li>
                                                     <a class="<?= $this->uri->uri_string() === 'home/order' ? 'active' : '' ?>" href="<?= base_url('home/order') ?>">
                                                         <span class="menu-text"> Booking</span>
                                                     </a>
-
                                                 </li>
                                             <?php } else { ?>
                                             <?php } ?>
@@ -146,7 +129,7 @@
                                 <div class="col-lg-2 col-xl-2 col-sm-6 col-6 col-custom">
                                     <div class="header-logo">
                                         <a href="<?= base_url('') ?>">
-                                            <img class="img-full" src="<?= base_url('assets/food/') ?>assets/images/logo/logoo.png" alt="Header Logo">
+                                            <img class="img-full" src="<?= base_url('assets/user/') ?>assets/images/logo/logoo.png" alt="Header Logo">
                                         </a>
                                     </div>
                                 </div>
@@ -156,26 +139,16 @@
                                             <li>
                                                 <a class="<?= $this->uri->uri_string() === '' ? 'active' : '' ?>" href="<?= base_url('') ?>">
                                                     <span class="menu-text"> Home</span>
-
                                                 </a>
-
                                             </li>
-
                                             <?php if ($this->session->userdata('email')) {  ?>
                                                 <li>
                                                     <a href="<?= base_url('home/order') ?>">
                                                         <span class="menu-text"> Booking</span>
-
                                                     </a>
-
                                                 </li>
                                             <?php } else { ?>
-                                            <?php } ?>
-                                            <li>
-                                                <a href="<?= base_url('home/about') ?>">
-                                                    <span class="menu-text"> Denah TPU</span>
-                                                </a>
-                                            </li>
+                                            <?php } ?>                                           
                                             <li>
                                                 <a href="<?= base_url('home/contact') ?>">
                                                     <span class="menu-text">Kontak</span>
@@ -245,8 +218,7 @@
                                     <?php if ($this->session->userdata('email')) { ?>
                                         <li class="menu-item-has-children"><a href="<?= base_url('home/order') ?>">Booking</a></li>
                                     <?php } else {
-                                    } ?>
-                                    <li><a href="<?= base_url('home/about') ?>">Denah TPU</a></li>
+                                    } ?>                                    
                                     <li><a href="<?= base_url('home/contact') ?>">Kontak</a></li>
                                 </ul>
                             </nav>

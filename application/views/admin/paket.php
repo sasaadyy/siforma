@@ -82,8 +82,8 @@
                     </div>
                     <div class="col">
                         <label>Blok Makam</label>
-                        <select name="id_restoran" class="form-control">
-                        <option value="<?= $row->id_makam ?>"><?= $row->nama_makam ?></option>
+                        <select name="id_makam" class="form-control">
+                        <option>--Pilih Blok Makam--</option>
                         <?php foreach($makam as $res){ ?>
                         <option value="<?= $res->id_makam ?>"><?= $res->nama_makam ?></option>
                         <?php } ?>

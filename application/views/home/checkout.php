@@ -71,16 +71,14 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th class="cart-product-name">Paket Pemakaman</th>
-                                    <th class="cart-product-name">QTY</th>
+                                    <th class="cart-product-name">Paket Pemakaman</th>                                   
                                     <th class="cart-product-total">Harga</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($orders as $order) { ?>
                                     <tr class="cart_item">
-                                        <td class="cart-product-name text-center"> <?= $order['name'] ?></td>
-                                        <td class="cart-product-name text-center"> <?= $order['qty'] ?></td>
+                                        <td class="cart-product-name text-center"> <?= $order['name'] ?></td>                                        
                                         <td class="cart-product-total text-center"><span class="amount">Rp. <?= number_format($order['subtotal'], 0, ',', '.') ?></span></td>
                                     </tr>
                                 <?php } ?>
@@ -109,7 +107,17 @@
                                     <tr>
                                         <td align="center">BRI</td>
                                         <td align="center">Euis</td>
-                                        <td align="center">1222132143</td>
+                                        <td align="center">1002-7627-392-09</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">BNI</td>
+                                        <td align="center">Euis</td>
+                                        <td align="center">0019-0932-092-87</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">BCA</td>
+                                        <td align="center">Euis</td>
+                                        <td align="center">1319-1293-095-77</td>
                                     </tr>
                                 </tbody>
                             </table>

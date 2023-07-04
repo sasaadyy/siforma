@@ -27,8 +27,7 @@ class Checkout extends CI_Controller
 		}
 
 		$data['orders'] = $this->cart->contents();
-		$data['bank'] = $this->db->query("SELECT * FROM bank")->result();
-
+				
 		$data['title'] = 'Checkout | Siforma';
 		$this->load->view('templates_home/header', $data);
 		$this->load->view('home/checkout');

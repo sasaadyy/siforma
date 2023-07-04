@@ -77,7 +77,7 @@
 							<div class="card-body  p-4">
 								<div class="media">
 									<span class="mr-3">
-									<i class="la la-comments-o"></i>
+									<i class="la la-folder"></i>
 									</span>
 									<div class="media-body text-white text-right">
 										<p class="mb-1">Total Jenazah</p>

@@ -24,8 +24,9 @@
                                     <tr>
                                         <th>No.</th>
                                         <th>Nama Users</th>
-                                        <th>Paket</th>                                       
-                                        <th>Order Date</th>
+                                        <th>Paket</th>
+                                        <th>Total</th>                                       
+                                        <th>Tanggal Booking</th>                                        
                                         <th>Status</th>
                                         <th>Aksi</th>
                                     </tr>
@@ -38,15 +39,14 @@
                                             <tr>
                                                 <td><?= $no++ ?>.</td>
                                                 <td><?= $row->nama ?></td>
-                                                <td><?= $row->nama_paket ?></td>                                                
+                                                <td><?= $row->nama_paket ?></td>  
+                                                <td><?= $row->total?></td>                                              
                                                 <td><?= date('d F, Y', strtotime($row->tanggal)) ?></td>
                                                 <td>
                                                     <?php if($row->status == "" or $row->status == "NULL" ){ ?>
-                                                        <span class="badge badge-secondary light shadow-sm"><i class="fa fa-exclamation-circle fa-lg"></i> &nbsp; belum terkonfirmasi</span>
-                                                    <?php }elseif($row->status == "In Procces"){ ?>
-                                                        <span class="badge badge-warning light shadow-sm"><i class="fa fa-refresh fa-lg fa-spin"></i> &nbsp; Proses Konfirmasi</span>
+                                                        <span class="badge badge-secondary light shadow-sm"><i class="fa fa-exclamation-circle fa-lg"></i> &nbsp; Proses</span>                                                    
                                                     <?php }elseif($row->status == "Closed"){ ?>
-                                                        <span class="badge badge-success light shadow-sm"><i class="fa fa-check-square fa-lg"></i> &nbsp; Sudah diKonfirmasi</span>
+                                                        <span class="badge badge-success light shadow-sm"><i class="fa fa-check-square fa-lg"></i> &nbsp; Terkonfirmasi</span>
                                                     <?php }elseif($row->status == "Rejected"){ ?>
                                                         <span class="badge badge-danger light shadow-sm"><i class="fa fa-times fa-lg"></i> &nbsp; Batal</span>
                                                     <?php }else{ ?>
@@ -57,10 +57,8 @@
                                                     <a href="<?= base_url('admin/transaksi/edit_transaksi/'.$row->id_transaksi) ?>" class="btn btn-facebook shadow btn-sm sharp mr-1"><i class="fa fa-pencil"></i></a>
                                                     <a href="<?= base_url('admin/transaksi/delete_transaksi/'.$row->id_transaksi) ?>" class="btn btn-youtube shadow btn-sm sharp" onclick="return confirm('Yakin ingin menghapus?')"><i class="fa fa-trash"></i></a>
                                                 </td>
-                                            </tr>
-                                      
+                                            </tr>                                      
                                     <?php } ?>
-
                                 </tbody>                                
                             </table>
                         </div>

@@ -19,7 +19,7 @@ class Dashboard extends CI_Controller {
 		$data['jumlah_makam'] = $this->makam_model->get_jumlah_makam();
 		$data['jumlah_transaksi'] = $this->transaksi_model->get_jumlah_transaksi();
 		$data['jumlah_status'] = $this->transaksi_model->get_jumlah_status();
-		$data['jumlah_kategori'] = $this->reskategori_model->get_jumlah_kategori();
+		$data['jumlah_jenazah'] = $this->jenazah_model->get_jumlah_jenazah();
 		$data['pendapatan'] = $this->transaksi_model->pendapatan();
 		$data['jumlah_contact'] = $this->db->query("SELECT count(id_contact) as id_contact FROM contact")->row()->id_contact;
 
