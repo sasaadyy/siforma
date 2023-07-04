@@ -39,9 +39,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/user/') ?>assets/css/style.css">
     <!-- <link rel="stylesheet" href="assets/css/style.min.css"> -->
 </head>
-
 <body>
-
     <div class="home-wrapper home-3">
         <!-- Header Area Start Here -->
         <header class="main-header-area">
@@ -66,7 +64,6 @@
                                                     <span class="menu-text"> Home</span>
 
                                                 </a>
-
                                             </li>
                                             <?php if ($this->session->userdata('email')) {  ?>                                                                                               
                                                 <li>
@@ -92,16 +89,13 @@
                                                     <span><a href="<?= base_url('auth/login') ?>">Login</a></span>
                                                     <span><a href="<?= base_url('auth/register') ?>">Register</a></span>
                                                 <?php } else { ?>
-                                                    <a href="#"><i class="fa fa-user-circle"></i> My Account</a>
-                                                    <ul class="dropdown-submenu dropdown-hover">
-                                                        <li><a href="<?= base_url('home/account') ?>">Profile</a></li>
+                                                    <a><i class="fa fa-user-circle"></i> <?= $this->session->userdata('nama') ?></a>
+                                                    <ul class="dropdown-submenu dropdown-hover">                                                        
                                                         <li><a href="<?= base_url('auth/login/logout') ?>" onclick="return confirm('Ingin Logout?')">Logout</a></li>
-
-                                                    </ul>
+                                                    </ul>                                                               								
                                                 <?php } ?>
                                             </li>
                                             <?php if ($this->session->userdata('email')) { ?>
-
                                             <?php } else {
                                             } ?>
                                             <li class="mobile-menu-btn d-lg-none">
@@ -165,15 +159,12 @@
                                                     <span><a href="<?= base_url('auth/login') ?>">Login</a></span>
                                                     <span><a href="<?= base_url('auth/register') ?>">Register</a></span>
                                                 <?php } else { ?>
-                                                    <a href="#"><i class="fa fa-user-circle"></i> My Account</a>
-                                                    <ul class="dropdown-submenu dropdown-hover">
-                                                        <li><a href="<?= base_url('home/account') ?>">Profile</a></li>
+                                                    <a href="#"><i class="fa fa-user-circle"></i> <?= $this->session->userdata('nama') ?></a>
+                                                    <ul class="dropdown-submenu dropdown-hover">                                                      
                                                         <li><a href="<?= base_url('auth/login/logout') ?>" onclick="return confirm('Ingin Logout?')">Logout</a></li>
-
                                                     </ul>
                                                 <?php } ?>
                                             </li>
-
                                             <?php if ($this->session->userdata('email')) { ?>
                                             <?php } else {
                                             } ?>
@@ -190,7 +181,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- off-canvas menu start -->
             <aside class="off-canvas-wrapper" id="mobileMenu">
                 <div class="off-canvas-overlay"></div>
@@ -229,19 +219,17 @@
                             <!-- mobile menu navigation start -->
                             <nav>
                                 <ul class="mobile-menu">
-                                    <li class="menu-item-has-children"><a href="#">My Account</a>
+                                    <li class="menu-item-has-children"><a href="#"><?= $this->session->userdata('nama') ?></a>
                                         <ul class="dropdown">
                                             <?php if (!$this->session->userdata('email')) {  ?>
                                                 <li><a href="<?= base_url('auth/login') ?>">Login</a></li>
                                                 <li><a href="<?= base_url('auth/register') ?>">Register</a></li>
-                                            <?php } else { ?>
-                                                <li><a href="<?= base_url('home/account') ?>">Profile</a></li>
+                                            <?php } else { ?>                                              
                                                 <li><a href="<?= base_url('auth/login/logout') ?>">Logout</a></li>
                                             <?php } ?>
 
                                         </ul>
                                     </li>
-
                                 </ul>
                             </nav>
                         </div>

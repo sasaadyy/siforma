@@ -17,10 +17,10 @@ class Dashboard extends CI_Controller {
 		$data['jumlah_users'] = $this->users_model->get_jumlah_users();
 		$data['jumlah_paket'] = $this->paket_model->get_jumlah_paket();
 		$data['jumlah_makam'] = $this->makam_model->get_jumlah_makam();
-		$data['jumlah_transaksi'] = $this->transaksi_model->get_jumlah_transaksi();
-		$data['jumlah_status'] = $this->transaksi_model->get_jumlah_status();
+		$data['jumlah_booking'] = $this->booking_model->get_jumlah_booking();
+		$data['jumlah_status'] = $this->booking_model->get_jumlah_status();
 		$data['jumlah_jenazah'] = $this->jenazah_model->get_jumlah_jenazah();
-		$data['pendapatan'] = $this->transaksi_model->pendapatan();
+		$data['pendapatan'] = $this->booking_model->pendapatan();
 		$data['jumlah_contact'] = $this->db->query("SELECT count(id_contact) as id_contact FROM contact")->row()->id_contact;
 
 		$data['title'] = "Dashboard | Siforma";

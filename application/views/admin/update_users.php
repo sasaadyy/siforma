@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?= base_url('admin/users') ?>">Data Users</a></li>
+                <li class="breadcrumb-item"><a href="<?= base_url('admin/users') ?>">Data Klien</a></li>
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">Update Users</a></li>
             </ol>
         </div>

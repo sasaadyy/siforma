@@ -12,7 +12,7 @@ class Users extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = "Data Users | Siforma";
+		$data['title'] = "Data Klien | Siforma";
 		$data['users'] = $this->db->query("SELECT * FROM users ORDER BY id_users DESC")->result();
 		$this->load->view('templates_admin/header',$data);
 		$this->load->view('templates_admin/topbar');
@@ -23,7 +23,7 @@ class Users extends CI_Controller {
 
 	public function detail_users($id)
 	{
-		$data['title'] = "Detail Users | Siforma";
+		$data['title'] = "Detail Klien | Siforma";
 		$data['detail'] = $this->users_model->ambil_id_users($id);
 		$this->load->view('templates_admin/header',$data);
 		$this->load->view('templates_admin/topbar');
@@ -34,63 +34,13 @@ class Users extends CI_Controller {
 
 	public function edit_users($id)
 	{
-		$data['title'] = "Update Users | Siforma";
+		$data['title'] = "Update Klien | Siforma";
 		$data['detail'] = $this->users_model->ambil_id_users($id);
 		$this->load->view('templates_admin/header',$data);
 		$this->load->view('templates_admin/topbar');
 		$this->load->view('templates_admin/sidebar');
 		$this->load->view('admin/update_users');
 		$this->load->view('templates_admin/footer');
-	}
-
-	public function tambah_users()
-	{
-		$nama 			= htmlspecialchars($this->input->post('nama'));
-		$alamat_users 		= htmlspecialchars($this->input->post('alamat_users'));
-		$email 			= htmlspecialchars($this->input->post('email'));
-		$password 		= md5($this->input->post('password'));
-		$no_hp 			= htmlspecialchars($this->input->post('no_hp'));
-		$gambar 		= $_FILES['gambar']['name'];
-
-		if($gambar){
-			$config ['upload_path'] = './assets/uploads/users';
-			$config ['allowed_types'] = 'jpg|jpeg|png|tiff';
-
-			$this->load->library('upload', $config);
-
-			if( $this->upload->do_upload('gambar') ){
-				$gambar = $this->upload->data('file_name');
-				$this->db->set('gambar',$gambar);
-			}else{
-				echo "Photo Users Gagal Diupload!";
-
-			}
-		}
-
-		$data = array(
-			'nama' 			=> $nama,
-			'alamat_users' 		=> $alamat_users,
-			'email' 		=> $email,
-			'password'		=> $password,
-			'no_hp' 		=> $no_hp,
-			'gambar' 		=> $gambar,
-			'role_id' 		=> 2,
-
-
-
-		);
-
-		$this->users_model->insert_users($data,'users');
-		$this->session->set_flashdata('pesan','
-			<div class="alert alert-success alert-dismissible solid fade show alert-alt shadow" role="alert">
-			<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-			Data Users Berhasil di <strong>Tambahkan!</strong>
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			</button>
-			</div>
-			');
-		redirect('admin/users');
 	}
 
 	public function update_users_aksi()

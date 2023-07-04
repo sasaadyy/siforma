@@ -4,7 +4,7 @@
         <div class="page-titles">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?= base_url('admin') ?>">Dashboard</a></li>
-                <li class="breadcrumb-item active"><a href="javascript:void(0)">Data Users</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Data Klien</a></li>
             </ol>
         </div>
         <!-- row -->
@@ -13,7 +13,7 @@
                 <?= $this->session->flashdata('pesan'); ?>
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title"><strong>Data Users</strong></h4>                       
+                        <h4 class="card-title"><strong>Data Klien</strong></h4>                       
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">

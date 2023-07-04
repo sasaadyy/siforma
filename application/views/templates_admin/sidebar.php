@@ -24,7 +24,7 @@
                 </a>
 
             </li>
-            <li><a class="ai-icon" href="<?= base_url('admin/transaksi') ?>" aria-expanded="false">
+            <li><a class="ai-icon" href="<?= base_url('admin/booking') ?>" aria-expanded="false">
                     <i class="la la-box"></i>
                     <span class="nav-text">Booking</span>
                 </a>

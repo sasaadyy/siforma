@@ -36,9 +36,7 @@
             						Dashboard
             					</div>
             				</div>
-            				<ul class="navbar-nav header-right">
-            					
-            					
+            				<ul class="navbar-nav header-right">            					            					
             					<li class="nav-item dropdown header-profile">
             						<a class="nav-link" href="javascript:void(0)" role="button" data-toggle="dropdown">
 										<i class="fa fa-user-circle"></i>

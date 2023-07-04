@@ -1,4 +1,3 @@
-<!-- Breadcrumb Area Start Here -->
 <div class="container">
     <div class="row">
         <div class="col-12 text-center">
@@ -9,7 +8,6 @@
     </div>
 </div>
 </div>
-<!-- Breadcrumb Area End Here -->
 <div class="single-product-main-area">
     <div class="container container-default custom-area">
         <?php foreach ($detail as $row) { ?>
@@ -72,13 +70,13 @@
                                         <td width="1">:</td>
                                         <td>
                                             <?php if ($row->status == "" or $row->status == "NULL") { ?>
-                                                <span class="text-info"><strong>Dispatch!</strong></span>
+                                                <span class="text-info"><strong>Validasi Data</strong></span>
                                             <?php } elseif ($row->status == "Rejected") { ?>
-                                                <span class="text-danger"><strong>Cancelled!</strong></span>
+                                                <span class="text-danger"><strong>Bukti TF tidak valid</strong></span>
                                             <?php } elseif ($row->status == "In Procces") { ?>
-                                                <span class="text-warning"><strong>On Your Way!</strong></span>
+                                                <span class="text-warning"><strong>Dalam Proses</strong></span>
                                             <?php } elseif ($row->status == "Closed") { ?>
-                                                <span class="text-success"><strong>Delivered!</strong></span>
+                                                <span class="text-success"><strong>Selesai</strong></span>
                                             <?php } else { ?>
                                             <?php } ?>
                                         </td>
@@ -98,17 +96,31 @@
                                         <td width="1">:</td>
                                         <td><?= date('d F, Y', strtotime($row->tanggal)) ?></td>
                                     </tr>
+                                    <tr>
+                                        <td>Nama Jenazah</td>
+                                        <td>:</td>
+                                        <td><?= $row->nm_jenazah ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tanggal Lahir</td>
+                                        <td>:</td>
+                                        <td><?= date('d F, Y', strtotime($row->tanggal_lahir)) ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tanggal Wafat</td>
+                                        <td>:</td>
+                                        <td><?= date('d F, Y', strtotime($row->tanggal_wafat)) ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tanggal Pemakaman</td>
+                                        <td>:</td>
+                                        <td><?= date('d F, Y', strtotime($row->tanggal_pemakaman)) ?></td>
+                                    </tr>
                                 </table>
                             </div>
-
-
-
                             <div class="sku mb-3">
-
-                                <a href="<?= base_url('home/order') ?>" class="btn obrien-button-2 bg-secondary rounded-0 text-white">Back</a>
-                                <?php if ($row->status == "" or $row->status == "NULL") { ?>
-                                    <a href="<?= base_url('home/order/batal_order/' . $row->id_transaksi) ?>" class="ml-3 btn obrien-button-2 bg-danger rounded-0 text-white" onclick="return confirm('Yakin ingin membatalkan pesanan?')">Batal</a>
-
+                                <a href="<?= base_url('home/order') ?>" class="btn obrien-button-2 bg-secondary rounded-0 text-white">Kembali</a>
+                                <?php if ($row->status == "" or $row->status == "NULL") { ?>                                   
                                 <?php } else {
                                 } ?>
                             </div>
@@ -116,5 +128,5 @@
                     </div>
                 </div>
             <?php } ?>
-            </div>
+        </div>
     </div>

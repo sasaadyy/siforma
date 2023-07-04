@@ -1,10 +1,10 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Transaksi_model extends CI_Model
+class Booking_model extends CI_Model
 {
 
-	public function get_jumlah_transaksi()
+	public function get_jumlah_booking()
 	{
 		$sql = "SELECT count(id_transaksi) as id_transaksi FROM transaksi";
 		$result = $this->db->query($sql);
@@ -56,7 +56,7 @@ class Transaksi_model extends CI_Model
 	}
 
 
-	public function insert_transaksi($data, $table)
+	public function insert_booking($data, $table)
 	{
 		$this->db->insert($table, $data);
 	}
@@ -91,7 +91,7 @@ class Transaksi_model extends CI_Model
 		$this->db->delete($table);
 	}
 
-	public function ambil_id_transaksi($id)
+	public function ambil_id_booking($id)
 	{
 		$result = $this->db->where('id_transaksi', $id)->get('transaksi');
 		if ($result->num_rows() > 0) {

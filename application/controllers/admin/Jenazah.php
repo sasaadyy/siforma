@@ -56,12 +56,19 @@ class Jenazah extends CI_Controller {
 
 	public function update_jenazah_aksi()
 	{
-		$id_transaksi 	= $this->input->post('id_transaksi');
-		$nm_jenazah 	= htmlspecialchars($this->input->post('nm_jenazah'));		
+		$id_transaksi 		= $this->input->post('id_transaksi');
+		$nm_jenazah		 	= htmlspecialchars($this->input->post('nm_jenazah'));		
+		$tanggal_lahir	 	= htmlspecialchars($this->input->post('tanggal_lahir'));
+		$tanggal_wafat 		= htmlspecialchars($this->input->post('tanggal_wafat'));
+		$tanggal_pemakaman 	= htmlspecialchars($this->input->post('tanggal_pemakaman'));		
+
 
 		$data = array(
 
 			'nm_jenazah' 		=> $nm_jenazah,
+			'tanggal_lahir'		=> $tanggal_lahir,
+			'tanggal_wafat'		=> $tanggal_wafat,
+			'tanggal_pemakaman'		=> $tanggal_pemakaman,
 		);
 
 		$where = array('id_transaksi' => $id_transaksi);

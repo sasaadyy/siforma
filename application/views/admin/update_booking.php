@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?= base_url('admin/transaksi') ?>">Data Pesanan</a></li>
+                <li class="breadcrumb-item"><a href="<?= base_url('admin/booking') ?>">Data Pesanan</a></li>
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">Update Pesanan</a></li>
             </ol>
         </div>
@@ -29,7 +29,7 @@
                                     <div class="product-detail-content">
                                         <div class="basic-form">
 
-                                            <form action="<?= base_url('admin/transaksi/update_transaksi_aksi') ?>" method="post" enctype="multipart/form-data">
+                                            <form action="<?= base_url('admin/booking/update_booking_aksi') ?>" method="post" enctype="multipart/form-data">
 
                                                 <div class="row">
                                                     <div class="col-9">
@@ -64,25 +64,22 @@
                                                     <label>Status</label>
                                                     <select name="status" class="form-control text-black">
                                                         <?php if ($row->status == "" or $row->status == "NULL") { ?>
-                                                            <option value="<?= $row->status ?>">Dispatch</option>
+                                                            <option value="<?= $row->status ?>">Validasi Data</option>
                                                         <?php } elseif ($row->status == "Closed") { ?>
-                                                            <option value="<?= $row->status ?>">Done</option>
+                                                            <option value="<?= $row->status ?>">Selesai</option>
                                                         <?php } elseif ($row->status == "In Procces") { ?>
-                                                            <option value="<?= $row->status ?>">In Procces</option>
+                                                            <option value="<?= $row->status ?>">Dalam Proses</option>
                                                         <?php } elseif ($row->status == "Rejected") { ?>
-                                                            <option value="<?= $row->status ?>">Rejected</option>
+                                                            <option value="<?= $row->status ?>">Bukti TF tidak valid</option>
                                                         <?php } else {
                                                         } ?>
 
-                                                        <option value="Closed">Done</option>
-                                                        <option value="In Procces">In Procces</option>
-                                                        <option value="Rejected">Rejected</option>
+                                                        <option value="Closed">Selesai</option>
+                                                        <option value="In Procces">Dalam Proses</option>
+                                                        <option value="Rejected">Bukti TF tidak valid</option>
                                                     </select>
 
                                                 </div>
-
-
-
                                                 <div class="form-group mt-4">
                                                     <a href="javascript:history.go(-1)" class="btn btn-danger light">Back</a>
                                                     <button type="submit" class="btn btn-primary light ml-3">Update</button>

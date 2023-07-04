@@ -26,12 +26,23 @@
 
                         </div>
                         <div class="form-group mt-3">
-                            <label>Blok Makam</label>                
+                            <label>Tanggal Lahir</label>                
                             <input type="hidden" name="id_transaksi" value="<?= $row->id_transaksi ?>">
-                            <input type="text" name="nama_makam" class="form-control text-black" value="<?= $row->id_makam ?>">
-                            <?= form_error('nama_makam', '<small class="text-danger" style="color: red;">','</small>'); ?>
-
+                            <input type="date" name="tanggal_lahir" class="form-control text-black" value="<?= $row->tanggal_lahir ?>">
+                            <?= form_error('tanggal_lahir', '<small class="text-danger" style="color: red;">','</small>'); ?>
                         </div>
+                        <div class="form-group mt-3">
+                            <label>Tanggal Wafat</label>                
+                            <input type="hidden" name="id_transaksi" value="<?= $row->id_transaksi ?>">
+                            <input type="date" name="tanggal_wafat" class="form-control text-black" value="<?= $row->tanggal_wafat ?>">
+                            <?= form_error('tanggal_wafat', '<small class="text-danger" style="color: red;">','</small>'); ?>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label>Tanggal Pemakaman</label>                
+                            <input type="hidden" name="id_transaksi" value="<?= $row->id_transaksi ?>">
+                            <input type="date" name="tanggal_pemakaman" class="form-control text-black" value="<?= $row->tanggal_pemakaman ?>">
+                            <?= form_error('tanggal_pemakaman', '<small class="text-danger" style="color: red;">','</small>'); ?>
+                        </div>                        
                     </div>
                     <div class="card-footer d-sm-flex justify-content-between align-items-center">
                         <div class="card-footer-link mb-4 mb-sm-0">
