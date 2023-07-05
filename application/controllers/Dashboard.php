@@ -13,8 +13,11 @@ class Dashboard extends CI_Controller
 		$this->load->view('home/index');
 		$this->load->view('templates_home/footer');
 	}
+<<<<<<< HEAD
 
 	
+=======
+>>>>>>> 1bf8276e591dc8a104b57c9b56f974b9a2237217
 }
 
 /* End of file Dashboard.php */

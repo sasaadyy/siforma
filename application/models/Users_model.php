@@ -16,14 +16,6 @@ class Users_model extends CI_Model {
 		return $this->db->get($table);
 	}
 
-	public function update_password($where,$data,$table)
-	{
-		$this->db->where($where);
-		$this->db->update($table,$data);
-	}
-
-
-
 	public function insert_users($data,$table)
 	{
 		$this->db->insert($table,$data);
@@ -50,11 +42,4 @@ class Users_model extends CI_Model {
 		$this->db->where($where);
 		$this->db->delete($table);
 	}
-
-
-
-
 }
- 
-/* End of file Type_model.php */
-/* Location: ./application/models/Type_model.php */

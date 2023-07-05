@@ -1,6 +1,3 @@
-<!-- Breadcrumb Area Start Here -->
-
-<!-- Breadcrumb Area End Here -->
 <!-- Login Area Start Here -->
 <div class="login-register-area mt-no-text mb-no-text">
     <div class="container container-default-2 custom-area">

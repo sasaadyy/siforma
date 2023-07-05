@@ -7,12 +7,10 @@
                 <li class="breadcrumb-item"><a href="<?= base_url('admin') ?>">Dashboard</a></li>
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">Data Paket Pemakaman</a></li>
             </ol>
-        </div>
-        <!-- row -->
+        </div>      
         <div class="row">
             <div class="col-12">
                 <?= $this->session->flashdata('pesan'); ?>
-
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title"><strong>Data Paket</strong></h4>
@@ -35,12 +33,10 @@
                                     <?php
                                     $no = 1;
                                     foreach($paket as $row){
-                                        ?>
-                                      
+                                        ?>                                
                                             <tr>
                                                 <td><?= $no++ ?></td>
                                                 <td><img src="<?= base_url('assets/uploads/paket/'.$row->foto) ?>" alt="" width="60"></td>
-                                                
                                                 <td><a href="javascript:void(0);"><strong><?= $row->nama_paket ?></strong></a></td>
                                                 <td><pre><?= $row->deskripsi ?></pre></td>
                                                 <td>Rp. <?= number_format($row->harga,0,',','.'); ?></td>
@@ -50,7 +46,6 @@
                                                 </td>
                                             </tr>
                                     <?php } ?>
-
                                 </tbody>
                             </table>
                         </div>
@@ -59,16 +54,12 @@
             </div>
         </div>
     </div>
-</div>
-
-       
-
-<!-- Modal -->
+</div>       
 <div class="modal fade" id="exampleModalCenter">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Tambah Data Menu</h5>
+                <h5 class="modal-title">Tambah Data Paket</h5>
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                 </button>
             </div>
@@ -82,8 +73,8 @@
                     </div>
                     <div class="col">
                         <label>Blok Makam</label>
-                        <select name="id_restoran" class="form-control">
-                        <option value="<?= $row->id_makam ?>"><?= $row->nama_makam ?></option>
+                        <select name="id_makam" class="form-control">
+                        <option>--Pilih Blok Makam--</option>
                         <?php foreach($makam as $res){ ?>
                         <option value="<?= $res->id_makam ?>"><?= $res->nama_makam ?></option>
                         <?php } ?>
