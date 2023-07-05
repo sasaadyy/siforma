@@ -22,15 +22,6 @@ class Dashboard extends CI_Controller {
 		$this->load->view('templates_home/footer');
 	}
 
-	public function makam_detail($id)
-	{
-		$data['detail'] = $this->db->query("SELECT * FROM makam r, res_kategori rk WHERE r.id_kategori=rk.id_kategori AND r.id_makam='$id' ORDER BY id_makam DESC")->result();
-		$data['title'] = 'Detail Makam | Siforma';
-		$this->load->view('templates_home/header',$data);
-		$this->load->view('home/makam_detail');
-		$this->load->view('templates_home/footer');
-	}
-
 }
 
 /* End of file Dashboard.php */
