@@ -1,6 +1,4 @@
-
-<div class="content-body">
-	<!-- row -->
+<div class="content-body">	
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xl-6 col-xxl-12">
@@ -29,13 +27,12 @@
 									</span>
 									<div class="media-body text-white text-right">
 										<p class="mb-1">Total Booking</p>
-										<h3 class="text-white"><?= $jumlah_transaksi ?></h3>
+										<h3 class="text-white"><?= $jumlah_booking ?></h3>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					
+					</div>					
 					<div class="col-xl-6 col-lg-6 col-sm-6">
 						<div class="widget-stat card bg-danger">
 							<div class="card-body p-4">
@@ -77,11 +74,11 @@
 							<div class="card-body  p-4">
 								<div class="media">
 									<span class="mr-3">
-									<i class="la la-comments-o"></i>
+									<i class="la la-folder"></i>
 									</span>
 									<div class="media-body text-white text-right">
 										<p class="mb-1">Total Jenazah</p>
-										<h3 class="text-white"><?= $jumlah_transaksi ?></h3>
+										<h3 class="text-white"><?= $jumlah_booking ?></h3>
 									</div>
 								</div>
 							</div>
@@ -101,8 +98,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
-		
+					</div>		
 			<div class="col-xl-9 col-xxl-8">
 				<div class="row">
 					<div class="col-xl-12">	
@@ -164,9 +160,7 @@
 										</div>
 									</div>
 								<?php } ?>
-
-							</div>
-							
+							</div>						
 						</div>
 					</div>
 				</div>

@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?= base_url('admin/users') ?>">Data Users</a></li>
+                <li class="breadcrumb-item"><a href="<?= base_url('admin/users') ?>">Data Klien</a></li>
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">Update Users</a></li>
             </ol>
         </div>
@@ -14,18 +14,10 @@
                 <div class="col-lg-9">
                     <div class="card">
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-xl-5 col-lg-6  col-md-6 col-xxl-5 ">
-                                    <!-- Tab panes -->
-                                    <div class="tab-content">
-                                        <div role="tabpanel" class="tab-pane fade show active" id="first">
-                                            <img class="img-fluid" src="<?= base_url('assets/uploads/users/'.$row->gambar) ?>" alt="">
-                                        </div>
-
-                                    </div>
+                            <div class="row">                                                                                          
                                 </div>
                                 <!--Tab slider End-->
-                                <div class="col-xl-7 col-lg-6  col-md-6 col-xxl-7 col-sm-12">
+                               
                                     <div class="product-detail-content">
                                        <div class="basic-form">
 
@@ -44,9 +36,6 @@
                                                     <?= form_error('email', '<small class="text-danger" style="color: red;">','</small>'); ?>
                                                 </div>
                                             </div>
-
-
-
                                             <div class="form-group mt-3">
                                                 <label>Alamat</label>
                                                 <input type="text" name="alamat_users" class="form-control text-black" value="<?= $row->alamat_users ?>">
@@ -59,16 +48,12 @@
                                                     <label>No. HP</label>
                                                     <input type="text" name="no_hp" class="form-control text-black" value="<?= $row->no_hp ?>">
                                                     <?= form_error('no_hp', '<small class="text-danger" style="color: red;">','</small>'); ?>
-                                                </div>
-                                                <div class="col">
-                                                    <label>Gambar</label>
-                                                    <input type="file" id="file-input" name="gambar" class="form-control-file mt-2" value="<?= set_value('gambar') ?>"> 
-                                                </div>
+                                                </div>                                               
                                             </div>
                                             
                                             <div class="form-group mt-4">
-                                                <a href="javascript:history.go(-1)" class="btn btn-danger light">Back</a>
-                                                <button type="submit" class="btn btn-primary light ml-3">Update</button>
+                                                <a href="javascript:history.go(-1)" class="btn btn-danger light">Kembali</a>
+                                                <button type="submit" class="btn btn-primary light ml-3">Ubah</button>
                                             </div>
                                         </form>
 

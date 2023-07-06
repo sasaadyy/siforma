@@ -6,7 +6,7 @@ class Contact extends CI_Controller {
 	public function index()
 	{
 
-		$data['title'] = 'Shop | Siforma';
+		$data['title'] = 'Contact | Siforma';
 		$this->load->view('templates_home/header',$data);
 		$this->load->view('home/contact');
 		$this->load->view('templates_home/footer');

@@ -42,8 +42,7 @@
                                             <td><?= $row->nama_makam ?></td>                                        
                                             <td><a href="javascript:void(0);"><strong><?= $row->jml_makam ?></strong></a></td>
                                             <td><img src="<?= base_url('assets/uploads/makam/'.$row->gambar) ?>" alt="" width="60"></td>
-                                            <td>
-                                                <a href="<?= base_url('admin/makam/menu_makam/'.$row->id_makam) ?>" class="btn btn-twitter shadow btn-sm sharp mr-1"><i class="fa fa-cutlery"></i></a>
+                                            <td>                                                
                                                 <a href="<?= base_url('admin/makam/edit_makam/'.$row->id_makam) ?>" class="btn btn-facebook shadow btn-sm sharp mr-1"><i class="fa fa-pencil"></i></a>
                                                 <a href="<?= base_url('admin/makam/delete_makam/'.$row->id_makam) ?>" class="btn btn-youtube shadow btn-sm sharp" onclick="return confirm('Yakin ingin menghapus?')"><i class="fa fa-trash"></i></a>
                                             </td>

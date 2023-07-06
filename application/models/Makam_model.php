@@ -23,6 +23,8 @@ class Makam_model extends CI_Model {
 		$this->db->update($table,$data);
 	}
 
+
+
 	public function insert_makam($data,$table)
 	{
 		$this->db->insert($table,$data);

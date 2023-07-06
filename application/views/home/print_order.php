@@ -5,26 +5,24 @@
             <div class="card shadow">
                 <div class="card-header"> Invoice <strong><?= date('d F, Y', strtotime($row->success_date)) ?></strong> <span class="float-right">
                     <strong>Status :<?php if($row->status == "" or $row->status == "NULL"){ ?>
-                        <span class="text-info">Dispatch!</span>
+                        <span class="text-info">Validasi Data</span>
                     <?php }elseif($row->status == "Rejected"){ ?>
-                        <span class="text-danger">Cancelled!</span>
+                        <span class="text-danger">Bukti TF tidak valid</span>
                     <?php }elseif($row->status == "In Procces"){ ?>
-                        <span class="text-warning">On Your Way!</span>
+                        <span class="text-warning">Dalam Proses</span>
                     <?php }elseif($row->status == "Closed"){ ?>
-                        <span class="text-success">Delivered!</span>
+                        <span class="text-success">Selesai</span>
                     <?php }else{ ?>
                         <?php } ?> </div>
                         <div class="card-body">
                             <div class="row mb-5">
                                 <div class="mt-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                                    <h6>Dari :</h6>
-                                    <div> <strong><?= $row->nama_restoran ?></strong> </div>
-                                    <div><?= $row->alamat ?></div>
+                                    <h6>Nama :</h6>
+                                    <div> <strong><?= $row->nama ?></strong> </div>                                   
                                 </div>
                                 <div class="mt-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                                    <h6>Pengiriman:</h6>
-                                    <div> <strong><?= $row->nama ?></strong> </div>
-                                    <div><?= $row->alamat_users ?></div>
+                                    <h6>Alamat :</h6>
+                                    <div> <strong><?= $row->alamat_users ?></strong> </div>                                   
                                 </div>
                                 <div class="mt-4 col-xl-3 col-lg-3 col-md-12 col-sm-12 d-flex justify-content-lg-end justify-content-md-center justify-content-xs-start">
                                     <div class="row align-items-center">
@@ -42,19 +40,17 @@
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th>Nama</th>
-                                            <th>Menu</th>
-                                            <th>Restoran</th>
-                                            <th>Jumlah</th>
+                                            <th>Nama Jenazah</th>
+                                            <th>Paket</th>
+                                            <th>Blok Makam</th>                                            
                                             <th class="right">Harga</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="center"><?= $row->nama ?></td>
-                                            <td class="left strong"><?= $row->nama_foods ?></td>
-                                            <td class="left strong"><?= $row->nama_restoran ?></td>
-                                            <td class="left"><?= $row->qty ?></td>
+                                            <td class="center"><?= $row->nm_jenazah?></td>
+                                            <td class="left strong"><?= $row->nama_paket ?></td>
+                                            <td class="left strong"><?= $row->nama_makam ?></td>                                           
                                             <td class="right">Rp. <?= number_format($row->harga,0,',','.'); ?></td>
                                         </tr>
                                     </tbody>
