@@ -143,5 +143,8 @@ class Transaksi extends CI_Controller
 	}
 }
 
+<<<<<<< HEAD
 	/* End of file Checkout.php */
 /* Location: ./application/controllers/home/Checkout.php */
+=======
+>>>>>>> 87f29114f3c2c4ce928dd20fbcb1b05199d17ba8

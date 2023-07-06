@@ -11,7 +11,7 @@
 
         <div class="row">
             <?php foreach ($detail as $row) { ?>
-                <div class="col-lg-12">
+                <div class="col-lg-16">
                     <div class="card">
                         <div class="card-body">
                             <div class="row">

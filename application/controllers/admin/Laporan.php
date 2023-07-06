@@ -36,23 +36,6 @@ class Laporan extends CI_Controller {
 
 	}
 
-	public function print_laporan()
-	{
-		$dari = $this->input->get('dari');
-		$sampai = $this->input->get('sampai');
-		$data['title'] = "Print Laporan Transaksi | Rental Mobil";
-		$data['laporan'] = $this->db->query("SELECT * FROM transaksi t, users u, paket f, makam r WHERE t.id_users=u.id_users AND t.id_paket=f.id_paket AND t.id_makam=r.id_makam AND date(tanggal) >= '$dari' AND date(tanggal) >= '$sampai'")->result();
-		
-		$this->load->view('admin/print_laporan',$data);
-	}
-
-
-	public function _rules()
-	{
-		$this->form_validation->set_rules('dari','Dari Tanggal','required');
-		$this->form_validation->set_rules('sampai','Sampai Tanggal','required');
-	}
-
 }
 
 /* End of file Laporan.php */
