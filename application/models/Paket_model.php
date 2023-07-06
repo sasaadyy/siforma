@@ -15,7 +15,7 @@ class Paket_model extends CI_Model {
 		$result = $this->db->where('id_paket',$id)
 							->limit(1)
 							->get('paket');
-		if( $result->num_rows() > 20 ){
+		if( $result->num_rows() > 0 ){
 			return $result->row();
 		}else{
 			return array();

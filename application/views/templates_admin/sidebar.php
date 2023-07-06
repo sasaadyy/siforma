@@ -11,6 +11,7 @@
                     <i class="flaticon-381-controls-3"></i>
                     <span class="nav-text">Paket</span>
                 </a>
+
             </li>
             <li><a class="ai-icon" href="<?= base_url('admin/makam') ?>" aria-expanded="false">
                     <i class="la la-file"></i>
@@ -47,16 +48,9 @@
                     <span class="nav-text">Laporan</span>
                 </a>
 
-<<<<<<< HEAD
             </li>           
         </ul>
     </div>
 </div>
  
 
-=======
-            </li>
-        </ul>
-    </div>
-</div>
->>>>>>> 87f29114f3c2c4ce928dd20fbcb1b05199d17ba8
