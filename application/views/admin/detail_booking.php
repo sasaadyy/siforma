@@ -100,8 +100,8 @@
 
 
                                                 </table>
-                                                <a href="<?= base_url('admin/booking/edit_booking/' . $row->id_transaksi) ?>" class="btn btn-facebook btn-sm mr-1"> Update</a>
-                                                <a href="<?= base_url('admin/booking/delete_booking/' . $row->id_transaksi) ?>" class="btn btn-youtube btn-sm" onclick="return confirm('Yakin ingin menghapus?')">Delete</a>
+                                                <a href="<?= base_url('admin/booking/edit_booking/' . $row->id_transaksi) ?>" class="btn btn-facebook btn-sm mr-1"> Ubah</a>
+                                                <a href="<?= base_url('admin/booking/delete_booking/' . $row->id_transaksi) ?>" class="btn btn-youtube btn-sm" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
                                             <?php } ?>
 
                                         </div>

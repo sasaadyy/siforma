@@ -14,7 +14,7 @@ class Dashboard extends CI_Controller {
 	{
 		$data['makam'] = $this->db->query("SELECT * FROM makam r ORDER BY id_makam DESC")->result();
 		$data['paket'] = $this->paket_model->tampil_data('paket')->result();
-		$data['jumlah_users'] = $this->users_model->get_jumlah_users();
+		$data['jumlah_klien'] = $this->klien_model->get_jumlah_klien();
 		$data['jumlah_paket'] = $this->paket_model->get_jumlah_paket();
 		$data['jumlah_makam'] = $this->makam_model->get_jumlah_makam();
 		$data['jumlah_booking'] = $this->booking_model->get_jumlah_booking();

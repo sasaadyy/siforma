@@ -14,7 +14,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title"><strong>Data Paket</strong></h4>
-                        <a href="" class="pull-right btn btn-facebook" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-plus"></i> Tambah Data Menu</a>
+                        <a href="" class="pull-right btn btn-facebook" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-plus"></i> Tambah Data Paket</a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">

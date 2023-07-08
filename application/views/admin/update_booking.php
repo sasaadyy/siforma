@@ -31,19 +31,15 @@
 
                                             <form action="<?= base_url('admin/booking/update_booking_aksi') ?>" method="post" enctype="multipart/form-data">
 
-                                                <div class="row">
-                                                    <div class="col-9">
-                                                        <label>Nama Users</label>
+                                                
+                                                    <div class="form-group mt-3">
+                                                        <label>Nama Klien</label>
                                                         <input type="hidden" name="id_transaksi" class="form-control text-black" value="<?= $row->id_transaksi ?>">
                                                         <input type="text" name="nama" class="form-control text-black" value="<?= $row->nama ?>" readonly>
 
                                                     </div>
-                                                    <div class="col-3">
-                                                        <label>Quantity</label>
-                                                        <input type="text" name="qty" class="form-control text-black" value="<?= $row->qty ?>" readonly>
-
-                                                    </div>
-                                                </div>
+                                                                                          </div>
+                                               
 
                                                 <div class="form-group mt-3">
                                                     <label>Menu</label>
@@ -81,8 +77,8 @@
 
                                                 </div>
                                                 <div class="form-group mt-4">
-                                                    <a href="javascript:history.go(-1)" class="btn btn-danger light">Back</a>
-                                                    <button type="submit" class="btn btn-primary light ml-3">Update</button>
+                                                    <a href="javascript:history.go(-1)" class="btn btn-danger light">Kembali</a>
+                                                    <button type="submit" class="btn btn-primary light ml-3">Ubah</button>
                                                 </div>
                                             </form>
 

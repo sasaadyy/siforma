@@ -50,8 +50,8 @@
                                             </div>
                                             
                                             <div class="form-group mt-4">
-                                                <a href="javascript:history.go(-1)" class="btn btn-danger light">Back</a>
-                                                <button type="submit" class="btn btn-primary light ml-3">Update</button>
+                                                <a href="javascript:history.go(-1)" class="btn btn-danger light">Kembali</a>
+                                                <button type="submit" class="btn btn-primary light ml-3">Ubah</button>
                                             </div>
                                         </form>
 

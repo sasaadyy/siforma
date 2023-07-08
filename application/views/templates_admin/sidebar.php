@@ -30,7 +30,7 @@
                 </a>
 
             </li>
-            <li><a class="ai-icon" href="<?= base_url('admin/users') ?>" aria-expanded="false">
+            <li><a class="ai-icon" href="<?= base_url('admin/klien') ?>" aria-expanded="false">
                     <i class="fa fa-users"></i>
                     <span class="nav-text">Klien</span>
                 </a>
