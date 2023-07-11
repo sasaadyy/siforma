@@ -32,8 +32,6 @@ class Checkout extends CI_Controller
 
 	public function update_cart()
 	{
-
-
 		$i = 1;
 		foreach ($this->cart->contents() as $items) {
 			$data = array(
@@ -43,12 +41,8 @@ class Checkout extends CI_Controller
 			$update = $this->cart->update($data);
 			$i++;
 		}
-
-
 		redirect('home/checkout');
 	}
-
-
 
 	public function tambah_cart($id)
 	{

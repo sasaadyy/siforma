@@ -41,7 +41,7 @@
                                             </div>
                                             <div class="form-group mt-3">
                                                 <label>Jumlah Makam</label>
-                                                <textarea class="form-control" name="jml_makam" rows="2"><?= $row->jml_makam  ?></textarea>
+                                                <textarea type="text" class="form-control text-black" name="jml_makam" rows="2"><?= $row->jml_makam  ?></textarea>
                                             </div>
                                             <div class="form-group mt-3">
                                                 <label>Gambar</label>

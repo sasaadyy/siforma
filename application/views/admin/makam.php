@@ -79,7 +79,7 @@
                         </div>
                         <div class="col">
                             <label class="form-control-label">Jumlah Makam</label>
-                            <input type="text" class="form-control" name="jml_blok" placeholder="Masukan Jumlah Blok Makam" required>
+                            <input type="text" class="form-control" name="jml_makam" placeholder="Masukan Jumlah Blok Makam" required>
                         </div>
                     </div>                                                                         
                     <div class="form-group">

@@ -71,7 +71,6 @@ class Login extends CI_Controller {
 		
 	}
 
-
 	public function _rules()
 	{
 		$this->form_validation->set_rules('email','Email','required');
@@ -82,51 +81,7 @@ class Login extends CI_Controller {
 	{
 		$this->session->sess_destroy();
 		redirect();
-	}
-
-	public function ganti_password()
-	{
-		$data['title'] = "Ganti Password";
-
-		$this->load->view('templates_admin/header',$data);
-		$this->load->view('change_password');
-		$this->load->view('templates_admin/footer');
-	}
-
-	public function ganti_password_aksi()
-	{
-		$pass_baru 	= $this->input->post('pass_baru');
-		$ulang_pass = $this->input->post('ulang_pass');
-
-		$this->form_validation->set_rules('pass_baru','New Password','required|matches[ulang_pass]');
-		$this->form_validation->set_rules('ulang_pass','Confirm Password','required');
-
-		if( $this->form_validation->run() != false ){
-			$id_customer			= $this->input->post('id_customer');
-			$data = array('password' => md5($pass_baru));
-			$id = array('username' => $this->session->userdata('username'));
-
-			$this->rental_model->update_password($id,$data,'customer');
-			$this->session->set_flashdata('pesan','
-				<div style="color: green;" class="alert alert-success alert-dismissible fade show" role="alert">
-  					Password Berhasil <strong>Diupdate!</strong>
-  					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    					<span aria-hidden="true">&times;</span>
-  					</button>
-				</div>
-				');
-				redirect('auth/login');
-		}else{
-			$this->load->view('templates_admin/header',$data);
-			$this->load->view('change_password');
-			$this->load->view('templates_admin/footer');
-			
-
-		} 
-
-
-
-	}
+	}	
 
 }
 

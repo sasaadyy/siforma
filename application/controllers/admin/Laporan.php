@@ -10,7 +10,6 @@ class Laporan extends CI_Controller {
         cek_user();
     }
 
-
 	public function index()
 	{
 		$data['title'] = "Data Laporan | Siforma";
@@ -45,7 +44,6 @@ class Laporan extends CI_Controller {
 		
 		$this->load->view('admin/print_laporan',$data);
 	}
-
 
 	public function _rules()
 	{
